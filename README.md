@@ -6,4 +6,4 @@ Data downloaded by SQL via MariaDB from database. Vizualisation by Power BI.
 
 Data also analysed by Python (Pandas). 
 
-Data in csv files (countries, covid; weather). 
+Data in csv files (countries_covid_pandas - statistics of countries, weather_pandas - information about weather in different countries). 
