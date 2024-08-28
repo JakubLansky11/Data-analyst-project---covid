@@ -4,4 +4,6 @@ Data analyst project about covid and impacts of various parameters (weather, pop
 
 Data downloaded by SQL via MariaDB from database. Vizualisation by Power BI. 
 
+Data also analysed by Python (Pandas). 
+
 Data in csv files (countries, covid; weather). 
