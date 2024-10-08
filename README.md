@@ -1,4 +1,4 @@
-Complex data analyst project
+Complex data analyst project (SQL, Power BI, Python)
 
 Data analyst project about covid and impacts of various parameters (weather, population density, ...) on number of infected people.
 
