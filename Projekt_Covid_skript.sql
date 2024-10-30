@@ -87,6 +87,8 @@ order by date
 /* this query shows numbers of infected, recovered and dead people on covid in different countries in the last day (in the table, statistic ended in may 2021)
 - ordered by number of dead people on covid from the highest to the lowest
 - you can look at other statistics in the table if there is some correlation with number of dead or infected people
+- data in table_1.csv
+- whole data in countries, covid.csv
  */
 select *
 from t_countries_3
@@ -96,6 +98,7 @@ order by deaths DESC
 /* this query provides information about weather in different cities and in different days 
 weekday - 1 Monday to Friday, 0 - Saturday or Sunday
 period of year - 0 Spring, 1 Summer, 2 Autumn, 3 Winter
+- data in weather.csv
 */
 select
 	date(date) AS date,
