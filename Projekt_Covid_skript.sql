@@ -24,7 +24,7 @@ select
 from le_1
 join le_2 on le_2.country = le_1.country
 
--- table contains information about countries like population density, median age or child mortality
+-- creating of table which contains information about countries like population density, median age or child mortality
 create or replace table t_countries_1
 select
 	c.country,
@@ -42,7 +42,7 @@ join life_expectancy_difference as led on led.country = e.country
 where year = 2019
 order by c.country
 
--- information about numbers of covid infected people and numbers of recovered and death people on covid
+-- creating of table which contains information about numbers of covid infected people and numbers of recovered and death people on covid
 create or replace table t_countries_2
 select
 	date,
@@ -53,7 +53,7 @@ select
 from covid19_basic as cb 
 order by country
 
--- table contains informations from previous tables
+-- creating of table which contains informations from previous tables
 create or replace table t_countries_3
 select
 	date,
@@ -84,6 +84,15 @@ select *
 from t_countries_3
 order by date
 
+/* this query shows numbers of infected, recovered and dead people on covid in different countries in the last day (in the table, statistic ended in may 2021)
+- ordered by number of dead people on covid from the highest to the lowest
+- you can look at other statistics in the table if there is some correlation with number of dead or infected people
+ */
+select *
+from t_countries_3
+where date like (select max(date) from t_countries_3)
+order by deaths DESC
+	
 /* this query provides information about weather in different cities and in different days 
 weekday - 1 Monday to Friday, 0 - Saturday or Sunday
 period of year - 0 Spring, 1 Summer, 2 Autumn, 3 Winter
