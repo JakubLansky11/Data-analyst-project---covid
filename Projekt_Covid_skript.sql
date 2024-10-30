@@ -85,7 +85,7 @@ from t_countries_3
 order by date
 
 /* this query provides information about weather in different cities and in different days 
-weekday - 1 Monday to Friday, 0 - Saturday of Sunday
+weekday - 1 Monday to Friday, 0 - Saturday or Sunday
 period of year - 0 Spring, 1 Summer, 2 Autumn, 3 Winter
 */
 select
