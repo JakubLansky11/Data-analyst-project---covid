@@ -1,4 +1,4 @@
-create table le_1
+create or replace table le_1
 select
 	country,
 	year,
@@ -6,7 +6,7 @@ select
 from life_expectancy
 where year = 1965
 
-create table le_2
+create or replace table le_2
 select
 	country,
 	year,
@@ -14,7 +14,7 @@ select
 from life_expectancy
 where year = 2015
 
-create table life_expectancy_difference
+create or replace table life_expectancy_difference
 select
 	le_1.country,
 	le_1.life_expectancy as life_exp_1,
@@ -23,7 +23,7 @@ select
 from le_1
 join le_2 on le_2.country = le_1.country
 
-create table t_countries_1
+create or replace table t_countries_1
 select
 	c.country,
 	capital_city,
@@ -40,7 +40,7 @@ join life_expectancy_difference as led on led.country = e.country
 where year = 2019
 order by c.country
 
-create table t_countries_2
+create or replace table t_countries_2
 select
 	date,
 	country,
@@ -56,7 +56,7 @@ from t_countries_1
 select *
 from t_countries_2
 
-create table t_countries_3
+create or replace table t_countries_3
 select
 	date,
 	t1.country,
